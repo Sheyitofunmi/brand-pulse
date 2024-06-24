@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  background-color: #F4F7FE;
+  font-family: "Roboto", sans-serif;
+  
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+
+.no-scrollbar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #dddddd;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #5c5c7b;
+  border-radius: 50px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #7878a3;
+}
+ 
+
+
+.activeClass{
+  border-right: 2px solid #4318FF;
+  color: #2B3674;
+  
+}
+
+
+.circle {
+  border-radius: 50%;
+  border-width: 4px;
+  border-style: solid;
+}
+
+.grid-div{
+  display: grid;
+  grid-gap: 20px;
+}
+.grid > article:nth-child(1) {
+  grid-column: span 2;
+}
