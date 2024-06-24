@@ -10,6 +10,7 @@ import {
   Legend,
   TooltipItem,
   ChartData,
+  ChartOptions,
 } from "chart.js";
 
 ChartJS.register(
@@ -21,7 +22,7 @@ ChartJS.register(
   Legend
 );
 
-const options = {
+const options: ChartOptions<"bar"> = {
   responsive: true,
   plugins: {
     legend: {
@@ -39,10 +40,10 @@ const options = {
       callbacks: {
         title: () => "",
         label: function (context: TooltipItem<"bar">) {
-          return context.raw as number;
+          return (context.raw as number).toString();
         },
       },
-      position: "nearest",
+      position: "nearest" as "nearest",
       yAlign: "top",
       caretPadding: 10,
     },
@@ -59,7 +60,7 @@ const options = {
       },
       ticks: {
         beginAtZero: true,
-      },
+      } as any,
     },
   },
 };
